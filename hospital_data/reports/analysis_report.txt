@@ -1,3 +1,0 @@
-3865 is the occurrence of HeartRate_Monitor_A device
-3866 is the occurrence of HeartRate_Monitor_B device
-2025-06-03	03:55:10 This is the recorded time for the first entry od data
