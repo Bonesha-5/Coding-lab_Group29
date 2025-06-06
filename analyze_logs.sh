@@ -9,12 +9,17 @@ read -p "Enter choice (1-3): " choice
 
 if [[ "1 2 3" =~ "$choice" ]]; then echo "Great choice" ; else echo "Error: Enter a valid input"; fi
 
+
 #create a reports directory and analysis file
 ana_dir="reports"
-if [ ! -d /hospital_data/$ana_dir ]; then mkdir $ana_dir ; fi
+if [ ! -d hospital_data/$ana_dir ];then 
+	mkdir -p hospital_data/$ana_dir 
+else 
+	echo "Directory $ana_dir exist" 
+fi
 
 file_name="analysis_report.txt"
-if [ ! -f /hospital_data/$ana_dir/$file_name ]; then touch $ana_dir/$file_name ; fi
+if [ ! -f hospital_data/$ana_dir/$file_name ]; then touch hospital_data/$ana_dir/$file_name ;else echo "The file $file_name exist"; fi
 
 #Check the choice of the user and make the analysis report
 
